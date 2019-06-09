@@ -14,7 +14,7 @@ class JdDuobaodaoItem(scrapy.Item):
     pass
 
 
-class DuoBaoDaoItem(scrapy.Item):
+class ProductItem(scrapy.Item):
     brandId = scrapy.Field()
     brandName = scrapy.Field()
     cappedPrice = scrapy.Field()
@@ -43,3 +43,15 @@ class DuoBaoDaoItem(scrapy.Item):
     startTime = scrapy.Field()
     status = scrapy.Field()
     usedNo = scrapy.Field()
+
+class PriceItem(scrapy.Item):
+    auctionId = scrapy.Field()
+    auctionRecordId = scrapy.Field()
+    currentPrice = scrapy.Field()
+    num = scrapy.Field()
+    currentBidder = scrapy.Field()
+    bidderNickName = scrapy.Field()
+    bidderImage = scrapy.Field()
+    status = scrapy.Field()
+    offerPrice = scrapy.Field()
+

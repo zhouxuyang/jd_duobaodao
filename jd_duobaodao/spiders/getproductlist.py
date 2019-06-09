@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import json
-from jd_duobaodao.items import DuoBaoDaoItem
+from jd_duobaodao.items import ProductItem
 from urllib.parse import urlencode, urlparse, parse_qs
 import math
 
@@ -22,7 +22,7 @@ class GetproductlistSpider(scrapy.Spider):
         if rej['code'] == 200:
             data = rej['data']
             for product in data['auctionInfos']:
-                item = DuoBaoDaoItem()
+                item = ProductItem()
                 item['brandId'] = product['brandId']
                 item['brandName'] = product['brandName']
                 item['cappedPrice'] = product['cappedPrice']
